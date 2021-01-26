@@ -1,6 +1,10 @@
-#  Milkeyways
-Towards unification of user input handling.
+![](mkw.png)
 
+__*Towards unification of user input handling*__
+
+<!-- // <kbd>/</kbd> - ```focus search``` -->
+
+----
 
 ## Introduction
 Recently it became an extremely popular practice for web applications, to enhance accessibility, through including keyboard shortcuts handling on the website. 
