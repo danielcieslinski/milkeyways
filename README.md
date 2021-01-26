@@ -15,18 +15,18 @@ This happens regardless of users' layout, keymappings and even other active shor
 
 This project aims to bring up the topic of estabilishing necessary standardizations of the common keyboard shortucts, by that bringing also more general topic, of communication schema for exchanging users' preferences across web applications.  
 
-### Future of UI
+## Future of UI
 Throughout recent years, into use have came multiple input devices that differ in design and capabilities. 
- Recently there is a broad research regarding various methods for controlling the computer, like [Gesture control](https://link.springer.com/chapter/10.1007/978-981-15-3639-7_96), or using [BCI](https://en.wikipedia.org/wiki/Brain%E2%80%93computer_interface).
-  Each of them will require to create an explicit mapping of actions in order to adapt them to the keyboard oriented web. Using methods proposed in this project it will be possible to enable the control in web applications, not needing to create any adaptation on the side of the application.
+Recently there is a broad research regarding various methods for controlling the computer, like [Gesture control](https://link.springer.com/chapter/10.1007/978-981-15-3639-7_96), or using [BCI](https://en.wikipedia.org/wiki/Brain%E2%80%93computer_interface).
+Each of them will require to create an explicit mapping of actions in order to adapt them to the keyboard oriented web. Using methods proposed in this project it will be possible to enable the control in web applications, not needing to create any adaptation on the side of the application.
 
 
 # Keyboards
 Keyboard oriented navigation is the key for efficiency while using computer.
 This has been known for a long time especially among linux users and developers, who came up with software like **vim** and emacs.
- Keyboards, vary in, language, layout, and especially available keys. Some of these are causing serious problems like <kbd>⌘</kbd> on apple devicies, taking role of usall <kbd>ctrl</kbd>. 
+Keyboards, vary in, language, layout, and especially available keys. Some of these are causing serious problems like <kbd>⌘</kbd> on apple devicies, taking role of usall <kbd>ctrl</kbd>. 
 
-One of this project goals is to come up with solution, where all this differences will be held on clients' side instead of having them covered on the server's side. I'm mentioning this [below](#outline)
+One of this project goals is to come up with __solution, where all this differences will be held on clients' side instead of having them covered on the server's side__. I'm mentioning this [below](#outline)
 
   <!-- More about keyboards [here](keyboards.md) -->
 
