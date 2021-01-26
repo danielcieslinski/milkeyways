@@ -1,4 +1,4 @@
-![](mkw.png)
+![](res/mkw.png)
 
 __*Towards unification of user input handling*__
 
