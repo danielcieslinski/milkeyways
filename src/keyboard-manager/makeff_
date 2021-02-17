@@ -1,0 +1,5 @@
+setpy:
+	fish
+	. venv/bin/activate.fish
+	set $TMP_PY (which python)
+	sudo $TMP_PY main.py
