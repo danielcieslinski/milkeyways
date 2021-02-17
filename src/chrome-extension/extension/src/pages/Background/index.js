@@ -1,47 +1,30 @@
-// import '../../assets/img/icon-34.png';
-// import '../../assets/img/icon-128.png';
-
+console.log('Log: background/index.js, Launched');
 
 function send(data) {
     let ws = new WebSocket('ws://localhost:3234/');
-    // messages = document.createElement('ul');
 
     ws.onopen = function (event) {
         // console.log('ws.onopen', event);
-        ws.send(data) // This calls ws on message.
+        ws.send(data); // This calls ws on message.
     };
 
     ws.onmessage = function (event) {
         console.log('ws.onmessage, called with data:', data);
-    }
+    };
+}
 
-};
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    send(JSON.stringify({ request: request, sender: sender }));
+    console.log(request);
+});
 
-// chrome.runtime.onmessage(message, )
-
-// chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-//     if (tabs.l > 0) {
-//         chrome.tabs.sendMessage(tabs[0].id, { greeting: "hello" }, function (response) {
-//             console.log(response.farewell);
-//         });
-//     }
-// });
-
-
-// chrome.tabs.sendMessage()
-
+//Requires permission
+// chrome.tabs.captureVisibleTab((data) => {console.log(data)})
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    var tabdata = { tabId: tabId, changeInfo: changeInfo, tab: tab };
-    
-    if (changeInfo.status === 'complete') {
-            // node = document.getRootNode();
-            tabdata.special_message = ['SPECIAL SPECIAL MESSAFEW!!!!!!!'];
-        }
-    
-        send(tabdata);
-
-
+    const s = JSON.stringify({ tabId: tabId, changeInfo: changeInfo, tab: tab });
+    send(s);
+    // console.log(tabId, changeInfo, tab);
     // if (changeInfo.status == 'complete') {
     //     chrome.tabs.query({ active: true }, function (tabs) {
     //         const msg = "Hello from background ?";

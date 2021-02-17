@@ -8,8 +8,9 @@
 import KeyboardJS from 'keyboardjs'
 
 
-KeyboardJS.bind('a', null, (e) => {
-  alert('a is released');
+KeyboardJS.bind('', null, (e) => {
+    
+    alert(' is released');
 });
 
 
@@ -19,10 +20,7 @@ function pollDOM() {
     
 
     if (links.length > 1) {
-        document.addEventListener('keydown', alert('x'))
-
-        KeyboardJS.bind('x')
-
+        // document.addEventListener('keydown', alert('x'))
         var out = [];
         links.forEach((el) => out.push({ rect: el.getBoundingClientRect()}));
         const parsed = JSON.stringify({document: document, links: out})
