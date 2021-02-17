@@ -1,75 +1,77 @@
-![](res/mkw.png)
+![](res/keyboard.png)
 
-__*Towards unification of user input handling*__
+__*Missing bridge for synccing keyboard events across applications*__
 
-<!-- // <kbd>/</kbd> - ```focus search``` -->
+---
+## Introduction 
+Milkeyways, is cross-platform, meta solution, for controlling and unifying input handling, across applications.
 
-----
+## How it works
+<kbd>MKW</kbd>
+is built on the idea that everything is context. 
+It requires to first creae the root context.
 
-## Introduction
-Recently it became an extremely popular practice for web applications, to enhance accessibility, through including keyboard shortcuts handling on the website. 
+```
+mkw init root
+```
 
-Due to the current limitation of the web, shortcuts are being assigned on the server side, through binding keyboard event listeners to the documents. 
+*Root context, must implement hook function, it's not very important if, it's surpresses or not. Reason for hooking the global keyboard listener is not fetching the event, but extremelly optimizing, conditional evaluation of context.*
 
-This happens regardless of users' layout, keymappings and even other active shortcuts, injected into the site. 
+The data structure is Directed Acyclic Graph implements following:
 
-This project aims to bring up the topic of estabilishing necessary standardizations of the common keyboard shortucts, by that bringing also more general topic, of communication schema for exchanging users' preferences across web applications.  
+1. Every context has the `active` property.
+2. Every context is a separate node in the tree
+3. For any context $X$  
+(context")
 
-## Future of UI
-Throughout recent years, into use have came multiple input devices that differ in design and capabilities. 
-Recently there is a broad research regarding various methods for controlling the computer, like [Gesture control](https://link.springer.com/chapter/10.1007/978-981-15-3639-7_96), or using [BCI](https://en.wikipedia.org/wiki/Brain%E2%80%93computer_interface).
-Each of them will require to create an explicit mapping of actions in order to adapt them to the keyboard oriented web. Using methods proposed in this project it will be possible to enable the control in web applications, not needing to create any adaptation on the side of the application.
+ 1. Given any context $X(*)$, there exists a path $P$  any context, here exist 
+ 1. At the top of the tree, there is always a root node with name "root" and _id=0 
+```
+context is by itself nothing more then just set 
+```
+```
+(context, binder)
+```
+of contexts
+First we have to register root listener
+```
+mkw init implement
+```
 
-
-# Keyboards
-Keyboard oriented navigation is the key for efficiency while using computer.
-This has been known for a long time especially among linux users and developers, who came up with software like **vim** and emacs.
-Keyboards, vary in, language, layout, and especially available keys. Some of these are causing serious problems like <kbd>⌘</kbd> on apple devicies, taking role of usall <kbd>ctrl</kbd>. 
-
-One of this project goals is to come up with __solution, where all this differences will be held on clients' side instead of having them covered on the server's side__. I'm mentioning this [below](#outline)
-
-  <!-- More about keyboards [here](keyboards.md) -->
-
-## Outline
-To integrate the sync of OS and Web apps, I propose creating:
-
-### **Client side** 
-   - Local keyboard manager
-   - Browser plugin that securely connects with local keyboard manager.
-
-### **Server**
-   - Very tiny, js library, that will implement a wrapper, around existing keyboard event bindings, allowing client to manipulate keyboard shortcuts.
-  
-
-   - [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) looks, like a reasonable thing to use.
+Milkeyways is built on the tree structure:
 
 
- However, I still dont feel like having the great idea, for defining this process and don't feel qualified enough for defining such.
-   - Submit an issue, if you'd wish to contribute.
+```
+(key_mapping, )
+```
 
-   I've also created a [question](https://stackoverflow.com/questions/64820525/user-preference-client-server-dialogue) on stack overflow, thinking most of the time that I'm just having some serious knowledge gaps and just missing a very obvious concept.
+# Features
 
-### 
 
-## Overall goals
-### User side
-- Assigning conflict-free keyboard shortcuts.
-- Endless keyboard modes.
-  - Kinda "every key is modifier" idea
-- Context-aware auto mode switching.
-- Detection of input mode in browser 
-- One global shortcut for listing active mappings.
-  
-   <kbd>super</kbd> + <kbd>?</kbd>
+ to  provide solution, for unified exchange 
 
-### In the browser
-Considering that extension is installed on both sides
-- Ability to remap shortcuts, that are in conflict with already assigned
-- Consistent navigation on all the websites using `milkeyways`
-- Enabling additionall non-conflicting keybindings using another extensions like, `Vimium`
 
-### Web application side
-Simply enabling accessibility for all the devices, not having to create any explicit case handling.
+## Features
 
-## Types of actions
-...
+
+
+- Add conditional handlers
+- 
+```
+
+```
+
+
+
+
+# Local Server
+```
+
+```
+
+
+## Browser extension
+- Record macros
+- Propose keypresses based on the history
+- Assign hjkl
+- Record history
