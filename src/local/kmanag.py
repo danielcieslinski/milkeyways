@@ -104,7 +104,7 @@ class KeyboardManager:
         # list(map(crp, self.contexts))
 
     def start(self):
-        self.contexts[0]
+@        self.contexts[0]
         self._hook()
         keyboard.wait('esc')
 

@@ -8,11 +8,6 @@
 import KeyboardJS from 'keyboardjs'
 
 
-KeyboardJS.bind('', null, (e) => {
-    
-    alert(' is released');
-});
-
 
 
 function pollDOM() {

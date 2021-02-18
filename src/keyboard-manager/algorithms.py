@@ -1,4 +1,3 @@
-
 class BFS:
     visited = []  # List to keep track of visited nodes.
     queue = []  # Initialize a queue
@@ -16,8 +15,6 @@ class BFS:
                     visited.append(neighbour)
                     queue.append(neighbour)
 
-
 def crawltill():
     out = [n.name]
     while node !=
-

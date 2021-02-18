@@ -117,18 +117,13 @@ class HotkeyBinder(Binder):
 
 
 # -----------------
-
 # class AbstractApplication(MetaContext):
 
 class KeyboardManager:
     contexts = [RootContext()]
     binders = {'global': HotkeyBinder()}
-    def add_hotkey(self, ):
-
-
-
-
-
+    def add_hotkey(self):
+        pass
 
 # ---------
 class App:
