@@ -96,8 +96,7 @@ class KeyboardManager:
 import subprocess
 
 def cmd(command):
-    out = subprocess.run([command], capture_output=True).stdout.decode()
-    return out
+    return subprocess.run([command], capture_output=True).stdout.decode()
 
 def get_active_window():
     return cmd('xdotool getwindowfocus getwindowname')
