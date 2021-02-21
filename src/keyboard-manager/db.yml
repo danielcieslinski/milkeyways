@@ -1,0 +1,32 @@
+symbols:
+		- [ƛ, λ]		
+
+modifiers:
+	keycode(94) + 'hjkl' -> [<left>, <down>,<up>,<right>]
+    # Remaps < located on the right side of left shift 
+    # TODO: Definition of modifier
+    
+rules:
+    keycode(94) == 'less' + ~shift
+
+grammar:
+    escape_char: \
+    union_char: +
+    negate: ~
+    sacred_key: keycode(133) == Super_L
+
+
+
+# negate: matches python `not`
+# So this:
+# keycode(94) == 'less' + ~shift
+# Will be compiled to:
+#----FORGET THIS ---------------
+# ek0 = lambda e: Key.from_keycode(94) 
+# ek1 = lambda e: Key.fromName('less'), 
+#----FORGET THIS ---------------
+# 
+# sacred_key: keycode(133) == Super_L
+# This should assert, that every there is no key, with keycode(133), or Super_L
+# Which aren't same key 
+

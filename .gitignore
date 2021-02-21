@@ -1,1 +1,6 @@
+venv/
 .vscode/
+.idea/
+venv/*
+links.md
+
