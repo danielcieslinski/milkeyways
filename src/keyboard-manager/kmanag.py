@@ -82,10 +82,7 @@ class MappingContext(MetaContext):
         self.active = active
         self.handler = handler
         # -------
-        if handler is not None:
-            self.handler = handler
-        else:
-            self.handler = self.resolve_handler()
+        self.handler = handler if handler is not None else self.resolve_handler()
 
     def resolve_handler(self):
         for n in self.parents:
