@@ -1,6 +1,8 @@
 from Xlib.display import Display
 from Xlib import X
 
+
+
 class KeyBinder(object):
     def __init__(self):
         self.cancel = False

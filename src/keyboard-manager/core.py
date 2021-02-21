@@ -2,7 +2,7 @@
 from functools import partial
 import subprocess
 from os import system
-from pyudev import key_to_scan_code
+from pyudev.wx import MonitorObserver
 
 GLOBAL = 0
 keyscanmap = {'a': 38, 'b' : 56}
