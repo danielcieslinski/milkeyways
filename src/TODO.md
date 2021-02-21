@@ -1,51 +1,17 @@
-# Main
-Most important concept is scoping
+Every binder must return unbind method
 
-1. For the convenience we assume there is a root, monitoring all keypresses. However, doesn't require surpressing, so we can easily 
-
-```
-remap(
-    [expression]
-
-```
+# Features
+- As airconsole plugin
 
 
+# -----------
+Data structure:
+1. Environment is built out of:
+	- Apps.
+	- Binders.
+	- KeyboardMappings. 
 
-```python
-class Context:
-    def __init__(self):
-
-    @classmethod
-    def make_root(cls):
-
-class Main:
-    def __init__(self):
-        self.ctx: 
-```
-
-
-# Local Host
-class 
-
-
-```python
-class ContextHandler:
-        
-
-class Context:
-    parent: [Node]
-    _state_history: []
-
-    handler:
-        r
-        requires_passed_event()
-    
-    binder, binder.handler()
-
-    get_context()
-    
-    context.binder. 
-```
+2. r
 
 
 # Web browser extension

@@ -4,7 +4,7 @@ function send(data) {
     let ws = new WebSocket('ws://localhost:3234/');
 
     ws.onopen = function (event) {
-        // console.log('ws.onopen', event);
+        console.log('ws.onopen', event);
         ws.send(data); // This calls ws on message.
     };
 
