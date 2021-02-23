@@ -1,2 +1,2 @@
 
-Hand = ['hjkl', '']
+Hand = ['asdf'] ['hjkl']

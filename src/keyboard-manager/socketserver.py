@@ -46,7 +46,7 @@ class Server:
             pprint(parsed)
 
         if SEND_RESPONSE:
-            ans = f"Received {data}!"
+            ans = f"ππππ{data}"
             await websocket.send(ans)
             if DEBUG:
                 print(f"> Sent: {ans}")

@@ -5,21 +5,18 @@ function send(data) {
 
     ws.onopen = function (event) {
         console.log('ws.onopen', event);
-        ws.send(data); // This calls ws on message.
+        ws.send(data);
     };
 
     ws.onmessage = function (event) {
-        console.log('ws.onmessage, called with data:', data);
+        console.log('resp', event.data)
     };
 }
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     send(JSON.stringify({ request: request, sender: sender }));
-    console.log(request);
 });
 
-//Requires permission
-// chrome.tabs.captureVisibleTab((data) => {console.log(data)})
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     const s = JSON.stringify({ tabId: tabId, changeInfo: changeInfo, tab: tab });
@@ -33,3 +30,4 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     //     })
     // }
 });
+
