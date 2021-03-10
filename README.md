@@ -1,5 +1,4 @@
 ![](res/keyboard.png)
-
 __*Missing bridge for synccing keyboard events across applications*__
 
 ---
@@ -10,17 +9,21 @@ Supporting:
  - Optimal hotkey assignement, given measurable norm for a device
  - Global text completion
 
+
+# Installation
+
+
 ## Development
 
 ### Chrome extension
-```
+```bash
+cd src/src/chrome-extension/extension/
 npm i
 npm start
-// This starts dev server, with webpack.
-// Will auto-rebuild and bundle extension on every save
-//
-// Load unpacked in chrome
 ```
+This will start development server at localhost:3000 
+For more details view the [README](src/chrome-extension/extension/README.md)
+
 ### Local server
 ```
 python socketserver.py
