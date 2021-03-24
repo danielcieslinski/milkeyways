@@ -2,18 +2,15 @@
 __*Missing bridge for synccing keyboard events across applications*__
 
 ---
-## Outline
-I hope to provide cross-platform solution, for handling user input. 
-Supporting:
- - Conflict resolution
- - Optimal hotkey assignement, given measurable norm for a device
+## Goals
+
+ - Standarized hotkey assinging, across OS programs and web apps 
+ - Conflict free assigning
+ - Optimal hotkey assignement, given measurable any device with a norm $|.|$
  - Global text completion
 
+# Done 
 
-# Installation
-
-
-## Development
 
 ### Chrome extension
 ```bash
