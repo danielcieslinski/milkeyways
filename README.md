@@ -11,8 +11,13 @@ __*Missing bridge for synccing keyboard events across applications*__
  - Optimal hotkey assignement, given measurable any device with a norm $|.|$
  - Global text completion
 
-# Done 
+# Features
 
+- [x] browser -> server connection
+- [x] real-time data piping from all tabs
+
+# Todo
+- [ ] assign hotkeys, in browser-extension, delegated by python server
 
 ### Chrome extension
 ```bash
