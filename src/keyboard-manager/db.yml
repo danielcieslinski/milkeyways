@@ -1,5 +1,5 @@
 symbols:
-		- [ƛ, λ]		
+	[ƛ, λ]		
 
 modifiers:
 	keycode(94) + 'hjkl' -> [<left>, <down>,<up>,<right>]
